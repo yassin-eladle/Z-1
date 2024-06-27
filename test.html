@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="ss.css">
+<title>صفحة المنتج</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <!-- زر السلة -->
+        <div class="cart-floating-button" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-logo">سلة المشتريات</span>
+        </div>
+
+        <nav>
+            <div class="logo">
+                <a href="1.gif"><img src="1.gif" alt="موقع المزاريطه سيتي"></a>
+            </div>
+            <ul class="nav-links">
+                <li class="sec1"><a href="products.html">المنتجات</a></li>
+                <li class="sec2"><a href="about.html">تعريف</a></li>
+                <li class="sec3"><a href="images.html">صور</a></li>
+                <li class="sec4"><a href="discord.html">الديسكورد</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="cart-container">
+    <h2><i class="fas fa-shopping-cart"></i> سلة المشتريات</h2>
+    <ul class="cart-items">
+        <!-- العناصر في السلة تظهر هنا -->
+    </ul>
+    <div class="total-amount">المبلغ الإجمالي: <span class="total">0</span> دينار</div>
+    <button class="checkout">إتمام الشراء</button>
+</div>
+
+<div class="container product-container">
+    <fieldset>
+        <legend>معلومات المنتج</legend>
+        <div class="product-image">
+            <img src="mercedes-x-class-.jpg" alt="اسم المنتج">
+        </div>
+        <div class="product-details">
+            <h1 class="product-name">اسم المنتج</h1>
+            <p class="product-price">سعر المنتج: 100 دينار</p>
+            <button class="add-to-cart" data-id="1" data-name="اسم المنتج" data-price="100">أضف إلى السلة</button>
+        </div>
+    </fieldset>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
