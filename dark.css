@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Basic styling for the toggle button */
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-control {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    /* Smaller size */
+}
+
+.toggle-control input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.control {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 15px;
+    /* Rounded corners */
+    transition: .4s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.control:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    /* Rounded switch */
+    transition: .4s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked+.control {
+    background-color: #ffffff;
+    /* Gold color when checked */
+}
+
+input:checked+.control:before {
+    background-color: black;
+    /* Button color in dark mode */
+    transform: translateX(20px);
+    /* Adjust for switch size */
+}
+
+.toggle-control:hover .control {
+    background-color: #b0b0b0;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Temporary hiding effect */
+input:checked:active+.control {
+    visibility: hidden;
+}
+
+/* Icon styling */
+.icon {
+    width: 20px;
+    height: 14px;
+    fill: #FFD700;
+    /* Gold color */
+    margin-left: 10px;
+}
+
+.cn1 {
+    direction: rtl;
+}
+
+h3 {
+    text-align: center;
+    font-size: 46px;
+}
+
+.title {
+    font-size: 20px;
+    padding-bottom: 7px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#t2 {
+    padding-right: 40px; 
+    
+}
+
+.content {
+    max-width: 950px;
+    padding-right: 40px;
+    font-size: 16px;
+}
+
+li {
+    padding-top: 10px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.navigation {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navigation button {
+    background-color: #0042f8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
